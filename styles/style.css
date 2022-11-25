@@ -1,0 +1,67 @@
+/* Icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+/* Select all */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+/* layout */
+.container {
+    width: 50vw;
+    margin: 1rem auto;
+    background-color: darkkhaki;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.container >* {
+    font-size: 1.5rem;
+}
+.container #output {
+    grid-column: 1/-1;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.container #btnAC {
+    grid-column: 1 / 3;
+    background-color: darkcyan;
+}
+.container #btnDel {
+    grid-column: 3 / -1;
+    background-color: rgb(91, 141, 141);
+}
+.container span {
+    box-shadow: .1vw .1vw .1vw blue inset;
+}
+.operators {
+    background-color: rgb(74, 103, 103);
+    color: white;
+}
+.numbers {
+    background-color: rgb(128, 166, 166);
+}
+.container #btnDecimal {
+    background-color: darkcyan;
+    color: white;
+}
+.container #btnEquals {
+    grid-column: 1 / -1;
+    background-color: rgb(91, 141, 141);
+}
+/* Hover effect */
+.container>button:hover {
+    transform: scale(10deg);
+    box-shadow: .2vw .2vw .2vw rgb(144, 183, 144) inset;
+}
+@media (width <= 400px) {
+    .container #btnDel{
+        font-size: .9rem;
+    }
+}
