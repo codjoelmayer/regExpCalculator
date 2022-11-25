@@ -1,12 +1,14 @@
 // Output
 let output = document.querySelector('#output');
 // Regular expression
-let regExp = /\d{,}+[+-/*.]?/g;
+let regExp = new RegExp(/^\d{0,}$/);
 /*
 \d
 [0-9]
 \d{,}+[+-/*.]?/g
 g: global
+/^\d*\.?\d*$/
+\d*\.?\d*
 */
 // Numbers and Operators
 let numbOps = document.querySelectorAll('.numbOps');
@@ -16,14 +18,14 @@ let cnt = 0;
 // Event listener
 numbOps.forEach((btnNumbOps, i)=> {
     btnNumbOps.addEventListener('click', ()=> {
-        console.log(regExp.test(output.value.trim()));
-        if(!regExp.test(output.value.trim()))
+        if(regExp.test(output.value))
             output.value += btnNumbOps.innerText;
-        if((output.value.length > 1) && (cnt == 1)) {
-            output.value = "";
-        }else {
-            cnt = 0;
-        }
+
+        // if((output.value.length > 1) && (cnt == 1)) {
+        //     output.value = "";
+        // }else {
+        //     cnt = 0;
+        // }
     })
 })
 // Equal

@@ -41,7 +41,7 @@ body {
     box-shadow: .1vw .1vw .1vw blue inset;
 }
 .operators {
-    background-color: rgb(74, 103, 103);
+    background-color: darkcyan;
     color: white;
 }
 .numbers {
