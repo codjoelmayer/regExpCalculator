@@ -1,7 +1,7 @@
 // Output
 let output = document.querySelector('#output');
 // Regular expression
-let regExp = new RegExp(/^\d{0,}$/);
+let regExp = new RegExp(/^((\d{0,})+[.+*/-]?\d{0,})?$/);
 /*
 \d
 [0-9]
