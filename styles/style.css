@@ -13,7 +13,7 @@ body {
 }
 /* layout */
 .container {
-    width: 50vw;
+    width: 30vw;
     margin: 1rem auto;
     background-color: darkkhaki;
     display: grid;
@@ -22,11 +22,11 @@ body {
 }
 .container >* {
     font-size: 1.5rem;
+    margin: .2rem;
 }
 .container #output {
     grid-column: 1/-1;
     text-align: right;
-    font-size: 2rem;
     font-weight: bold;
 }
 .container #btnAC {
@@ -60,7 +60,7 @@ body {
     transform: scale(10deg);
     box-shadow: .2vw .2vw .2vw rgb(144, 183, 144) inset;
 }
-@media (width <= 400px) {
+@media (width < 500px) {
     .container #btnDel{
         font-size: .9rem;
     }
