@@ -1,7 +1,7 @@
 // First operand
 let firstOp = 0;
 // Output
-let output = document.querySelector('#output');
+let output = document.querySelector('[data-output]');
 // Regular expression
 let regExp = new RegExp(/^(\d{0,})*(\d{0,})?(\d*)?$/);
 // Operator
@@ -15,17 +15,17 @@ g: global
 \d*\.?\d*
 */
 // Numbers and Operators
-let numbOps = document.querySelectorAll('.numbOps');
+let numbOps = document.querySelectorAll('[data-numbOps]');
 // Equals
-let btnEqual = document.querySelector('#btnEquals');
+let btnEqual = document.querySelector('[data-btnEqual]');
 let cnt = 0;
 // AC
 function clear() {
     output.value = "";
 }
-document.querySelector('#btnAC').addEventListener('click', clear)
+document.querySelector('[data-btnAC]').addEventListener('click', clear)
 // Backspace
-document.querySelector('#btnDel').addEventListener('click', ()=>{
+document.querySelector('[data-remove]').addEventListener('click', ()=>{
     output.value = output.value.slice(0, -1);
 })
 // Event listener
@@ -50,12 +50,14 @@ btnEqual.addEventListener('click', ()=> {
     try {
         switch(operator) {
             case '+':
+                console.log(firstOp, output.value);
                 output.value = eval(`${firstOp} + ${output.value}`).toFixed(2); 
             break;
             case '/':
                 output.value = eval(`${firstOp} / ${output.value}`).toFixed(2); 
             break;
             case '*':
+            case 'X':
                 output.value = eval(`${firstOp} * ${output.value}`).toFixed(2); 
             break;
             case '-':

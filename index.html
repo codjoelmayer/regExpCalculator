@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <input id="output" type="text" placeholder="0" readonly >
+        <input data-output type="text" placeholder="0" readonly >
         <div data-menu class="row">
             <span>
                 <i class="bi bi-clock"></i>
@@ -18,29 +18,29 @@
                 <i class="bi bi-memory"></i>
             </span>
             <span>
-                <i class="bi bi-backspace"></i>
+                <i class="bi bi-backspace" data-remove></i>
             </span>
         </div>
         <button data-btnAC>C</button>
         <button class="operators">()</button>
-        <button class="operators">%</button>
-        <button id="btnDiv" class="operators">/</button>
-        <button data-numbers>7</button>
-        <button data-numbers>8</button>
-        <button data-numbers>9</button>
-        <button id="btnMul" class="operators">X</button>
-        <button data-numbers>4</button>
-        <button data-numbers>5</button>
-        <button data-numbers>6</button>
-        <button id="btnSub" class="operators">-</button>
-        <button data-numbers >1</button>
-        <button data-numbers >2</button>
-        <button data-numbers>3</button>
-        <button id="btnAdd" class="operators">+</button>
-        <button data-plusOrMin>+/-</button>
-        <button data-numbers id="btnZero">0</button>
-        <button data-btnDec id="btnDecimal">.</button>
-        <button data-btnEqual class="operators">=</button>
+        <button data-numbOps class="operators">%</button>
+        <button data-numbOps class="operators">/</button>
+        <button data-numbers="7" data-numbOps>7</button>
+        <button data-numbers="8" data-numbOps>8</button>
+        <button data-numbers="9" data-numbOps>9</button>
+        <button data-numbOps class="operators">X</button>
+        <button data-numbers="4" data-numbOps>4</button>
+        <button data-numbers="5" data-numbOps>5</button>
+        <button data-numbers="6" data-numbOps>6</button>
+        <button data-numbOps class="operators">-</button>
+        <button data-numbers="1" data-numbOps>1</button>
+        <button data-numbers="2" data-numbOps>2</button>
+        <button data-numbers="3" data-numbOps>3</button>
+        <button class="operators" data-numbOps>+</button>
+        <button data-plusOrMin data-numbOps>+/-</button>
+        <button data-numbers="0" data-numbOps>0</button>
+        <button data-btnDec="." data-numbOps>.</button>
+        <button data-btnEqual>=</button>
     </div>
     <script src="./js/code.js"></script>
 </body>
