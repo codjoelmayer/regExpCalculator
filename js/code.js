@@ -3,7 +3,7 @@ let firstOp = 0;
 // Output
 let output = document.querySelector('[data-output]');
 // Regular expression
-let regExp = new RegExp(/^(\d{0,})*(\d{0,})?(\d*)?$/);
+let regExp = new RegExp(/^(\d+|\d{0,}(\d{0,})*)((\.\d+)*)?$/);
 // Operator
 let operator = "";
 /*
