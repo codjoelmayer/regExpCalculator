@@ -1,5 +1,5 @@
 /* Icon */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 /* Select all */
 *,
 *::after,
@@ -8,60 +8,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary: #000;
+    --secondary: rgb(255, 255, 255);
+    --alternative: #6DD13B;
+    --clear: #F0716A; 
+    --buttonBg: #171717;
+}
 body {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 /* layout */
 .container {
-    width: 30vw;
-    margin: 1rem auto;
-    background-color: darkkhaki;
+    width: 20rem;
+    aspect-ratio: 1/1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    gap: .8rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    background-color: var(--primary);
+    padding: .2rem;
 }
 .container >* {
-    font-size: 1.5rem;
-    margin: .2rem;
+    width: 100%;
 }
-.container #output {
+.container :first-child {
     grid-column: 1/-1;
     text-align: right;
-    font-weight: bold;
+    font-size: 2rem;
 }
-.container #btnAC {
-    grid-column: 1 / 3;
-    background-color: darkcyan;
+/* Display -> flex */
+.row[data-menu] {
+    grid-column: 1/-1;
+    display: flex;
+    gap: 2rem;
+    padding-block: .2rem;
 }
-.container #btnDel {
-    grid-column: 3 / -1;
-    background-color: rgb(91, 141, 141);
+.row[data-menu] i {
+    color: var(--secondary);
+    padding-inline: .2rem;
 }
-.container span {
-    box-shadow: .1vw .1vw .1vw blue inset;
+.row[data-menu] :last-child {
+    margin-inline-start: auto;
 }
-.operators {
-    background-color: darkcyan;
-    color: white;
+.container button {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 }
-.numbers {
-    background-color: rgb(128, 166, 166);
+button[data-btnAC] {
+    color: var(--clear);
 }
-.container #btnDecimal {
-    background-color: darkcyan;
-    color: white;
+/* Operators */
+button{
+    background-color: var(--buttonBg);
+    color: var(--alternative);
 }
-.container #btnEquals {
-    grid-column: 1 / -1;
-    background-color: rgb(91, 141, 141);
+.container :is(button[data-numbers],
+button[data-plusOrMin], 
+button[data-btnDec]){
+    color: var(--secondary);
 }
-/* Hover effect */
-.container>button:hover {
-    transform: scale(10deg);
-    box-shadow: .2vw .2vw .2vw rgb(144, 183, 144) inset;
-}
-@media (width < 500px) {
-    .container #btnDel{
-        font-size: .9rem;
-    }
+button[data-btnEqual] {
+    background-color: var(--alternative);
+    color: var(--secondary);
 }
