@@ -10,28 +10,37 @@
 <body>
     <div class="container">
         <input id="output" type="text" placeholder="0" readonly >
-        <button id="btnAC">AC</button>
-        <button id="btnDel">
+        <div data-menu class="row">
+            <span>
+                <i class="bi bi-clock"></i>
+            </span>
+            <span>
+                <i class="bi bi-memory"></i>
+            </span>
             <span>
                 <i class="bi bi-backspace"></i>
-            </span>    
-        </button>
-        <button class="numbers numbOps">1</button>
-        <button class="numbers numbOps">2</button>
-        <button id="btnDiv" class="operators numbOps">/</button>
-        <button class="numbers numbOps">3</button>
-        <button class="numbers numbOps">4</button>
-        <button id="btnMul" class="operators numbOps">*</button>
-        <button  class="numbers numbOps">5</button>
-        <button class="numbers numbOps">6</button>
-        <button id="btnSub" class="operators numbOps">-</button>
-        <button class="numbers numbOps">7</button>
-        <button class="numbers numbOps">8</button>
-        <button id="btnAdd" class="operators numbOps">+</button>
-        <button class="numbers numbOps">9</button>
-        <button id="btnZero" class="numbers numbOps">0</button>
-        <button id="btnDecimal" class="numbOps">.</button>
-        <button id="btnEquals">=</button>
+            </span>
+        </div>
+        <button data-btnAC>C</button>
+        <button class="operators">()</button>
+        <button class="operators">%</button>
+        <button id="btnDiv" class="operators">/</button>
+        <button data-numbers>7</button>
+        <button data-numbers>8</button>
+        <button data-numbers>9</button>
+        <button id="btnMul" class="operators">X</button>
+        <button data-numbers>4</button>
+        <button data-numbers>5</button>
+        <button data-numbers>6</button>
+        <button id="btnSub" class="operators">-</button>
+        <button data-numbers >1</button>
+        <button data-numbers >2</button>
+        <button data-numbers>3</button>
+        <button id="btnAdd" class="operators">+</button>
+        <button data-plusOrMin>+/-</button>
+        <button data-numbers id="btnZero">0</button>
+        <button data-btnDec id="btnDecimal">.</button>
+        <button data-btnEqual class="operators">=</button>
     </div>
     <script src="./js/code.js"></script>
 </body>
