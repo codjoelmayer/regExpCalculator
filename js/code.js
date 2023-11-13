@@ -2,7 +2,7 @@
 let firstOp = 0;
 // Output
 let output = document.querySelector('[data-output]');
-let regExp = new RegExp(/^((\d{0,})*(\.\d+)?)$/);
+let regExp = new RegExp(/^(\d{0,})\.?$/);
 // Operator
 let operator = "";
 /*
@@ -27,8 +27,8 @@ document.querySelector('[data-btnAC]').addEventListener('click', clear)
 document.querySelector('[data-remove]').addEventListener('click', ()=>{
     output.value = output.value.slice(0, -1);
 })
-// Event listener
-numbOps.forEach((btnNumbOps, i)=> {
+// Display
+numbOps.forEach((btnNumbOps)=> {
     btnNumbOps.addEventListener('click', ()=> {
         if(regExp.test(output.value))
             output.value += btnNumbOps.innerText;
@@ -49,7 +49,6 @@ btnEqual.addEventListener('click', ()=> {
     try {
         switch(operator) {
             case '+':
-                console.log(firstOp, output.value);
                 output.value = eval(`${firstOp} + ${output.value}`).toFixed(2); 
             break;
             case '/':
@@ -66,5 +65,4 @@ btnEqual.addEventListener('click', ()=> {
     }catch(e) {
         alert(`An error occurred, please try again: ${e.message}`);
     }
-
 })
